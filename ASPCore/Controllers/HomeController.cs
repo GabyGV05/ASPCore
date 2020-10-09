@@ -10,10 +10,9 @@ namespace ASPCore.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+
+        
+
 
         public IActionResult About()
         {
@@ -38,6 +37,47 @@ namespace ASPCore.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+
+        public IActionResult Index()
+        {
+            Array array;
+            List<AlumnoModel> alumnos = new List<AlumnoModel>();
+            alumnos.Add(new AlumnoModel
+            {
+                NumCont = 17030086,
+                Nombre="Gabriela",
+                Apellido_paterno="Gramillo",
+                Apellido_materno="Vaquera",
+                Codigo_especialidad=1
+
+            });
+
+            alumnos.Add(new AlumnoModel
+            {
+                NumCont = 17030083,
+                Nombre = "Esperanza Jaqueline",
+                Apellido_paterno = "Fernadez",
+                Apellido_materno = "Maldonado",
+                Codigo_especialidad = 1
+
+            });
+
+            alumnos.Add(new AlumnoModel
+            {
+                NumCont = 17030084,
+                Nombre = "Karla Nohemi",
+                Apellido_paterno = "García ",
+                Apellido_materno = "Reza",
+                Codigo_especialidad = 1
+
+            });
+            array = alumnos.ToArray();
+            ViewBag.alumnos = array;
+
+            return View();
+
         }
     }
 }
