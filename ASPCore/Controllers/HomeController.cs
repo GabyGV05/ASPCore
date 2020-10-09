@@ -58,7 +58,7 @@ namespace ASPCore.Controllers
             {
                 NumCont = 17030083,
                 Nombre = "Esperanza Jaqueline",
-                Apellido_paterno = "Fernadez",
+                Apellido_paterno = "Fernandez",
                 Apellido_materno = "Maldonado",
                 Codigo_especialidad = 1
 
